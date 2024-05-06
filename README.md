@@ -30,4 +30,5 @@ The project analyses bike share data in Chicago, New York City, and Washington b
 
 ### Credits
 This is a Udacity project [Introduction to Python](https://learn.udacity.com/paid-courses/cd0024).
+- Added additional change to documentation
 
