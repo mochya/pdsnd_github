@@ -70,7 +70,6 @@ def time_stats(df):
     """Displays statistics on the most frequent times of travel."""
 
     print('Calculating The Most Frequent Times of Travel...\n')
-    start_time = time.time()
 
     # TO DO: display the most common month
     common_month = df['month'].mode()[0]
@@ -84,7 +83,6 @@ def time_stats(df):
     common_hour = df['stdtc'].dt.hour.mode()[0]
     print("The most common start hour is {}".format(common_hour))
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
 
@@ -92,7 +90,6 @@ def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
 
     print('Calculating The Most Popular Stations and Trip...\n')
-    start_time = time.time()
 
     # TO DO: display most commonly used start station
     common_sstation = df['Start Station'].mode()[0]
@@ -107,7 +104,6 @@ def station_stats(df):
     common_combine = df['se_combine'].mode()[0]
     print("The most common frequent combination of start station and end station trip is {}".format(common_combine))
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
 
@@ -115,7 +111,6 @@ def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
 
     print('Calculating Trip Duration...\n')
-    start_time = time.time()
 
     # TO DO: display total travel time
     total_second = df['Trip Duration'].sum()
@@ -125,7 +120,6 @@ def trip_duration_stats(df):
     mean_second = df['Trip Duration'].mean()
     print("The average travel time is {}.".format(mean_second))
     
-    print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
 
@@ -133,7 +127,6 @@ def user_stats(df, city):
     """Displays statistics on bikeshare users."""
 
     print('\nCalculating User Stats...\n')
-    start_time = time.time()
 
     # TO DO: Display counts of user types
     user_types = df['User Type'].value_counts()
@@ -154,7 +147,6 @@ def user_stats(df, city):
         birth_mode = df['Birth Year'].mode()[0]
         print("The most common year of birth is: {}".format(birth_mode))
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
 
